@@ -1,0 +1,96 @@
+{% extends "main_base.html" %}
+{% block body %}
+
+<main onload="update_values()">
+    <div class="container py-3">
+        <header></header>
+
+        <div class="pricing-hearder p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Market</h1>
+            <p class="fs-5 text-muted">
+                "과일 좋아요 비타민 C 좋아요 모두다 좋아요
+                편하게 이용해주세요."
+            </p>
+        </div>
+        <div class="row g-5">
+
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3  ">
+                    <span class="text-primary">on your cart</span>
+                    <span class="badge bg-primary rounded-pill" id="count_item">0</span>
+                </h4>
+                <!--            <form method="POST">-->
+                <ul class="list-group" id="list" style="height:250px;">
+
+                </ul>
+                <form method="POST" class="">
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="total" name="total" readonly/>
+                        <div class="input-group-append">
+                            <span class="input-group-text">₩</span>
+                        </div>
+                    </div>
+                    <input type="submit" value="결제" id="pay">
+                    <input type="submit" value="추가" id="add">
+                    <input type="button" value="취소" id="reset">
+                </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h3>Web Streaming</h3>
+                <img src="{{ url_for('video')}}">
+            </div>
+        </div>
+    </div>
+
+    <!--#ajax 파라미터를 담아가지고 POST f form parameter-->
+
+    <script type="text/javascript">
+
+var pays = []
+var intervalID = setInterval(update_values,200);
+  $('#reset').click(function(){
+    $('#list').html('')
+    $.post($SCRIPT_ROOT + '/_stuff',
+    function(data){
+    alert("취소");
+    },'json')
+  });
+  function update_values() {
+        var mylist = document.getElementById("list");
+        var html = '';
+        $.getJSON($SCRIPT_ROOT + '/_stuff',
+
+      function(dataset) {
+        var res = dataset.result;
+        var total = dataset.total_price;
+        var count = dataset.cnt;
+        $("#count_item").text(res.length)
+
+        for(var i =0 ; i < res.length;i++){
+        console.log(res[i].name)
+        html += '<li class ="list_group-item d-flex justify-content-between lh-sm">'
+        html += '   <div>'
+        html += '       <h6 class="my-0">'
+        html += '           <span>'+res[i].name+'</span>'
+        html += '           <span>'+res[i].cnt+'개</span>'
+        html += '           <span>₩'+res[i].price+'</span>'
+        html += '   </div>'
+        html += '</li>'
+            };
+            mylist.innerHTML = html
+            $('#total').val(total);
+
+        });
+    };
+   $("#add").click(function () {
+       $("form").attr("action", "/add");
+    });
+
+    $("#pay").click(function () {
+       $("form").attr("action", "/pay");
+});
+
+
+    </script>
+</main>
+{% endblock %}

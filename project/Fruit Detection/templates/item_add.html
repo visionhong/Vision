@@ -1,0 +1,104 @@
+{% extends 'main_base.html' %}
+{% block body %}
+
+<div class="container py-3">
+    <header></header>
+    <div class="pricing-hearder p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Add</h1>
+        <p class="fs-5 text-muted">
+            "추가 하실 과일을 선택하시고 밑에 추가된 목록에서 개수
+            선택하시면 총 개수와 금액이 나옵니다 편하게 이용해주세요."
+        </p>
+    </div>
+
+    <main>
+
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="item">
+            {% for value in datas.values %}
+
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-noraml" name="fruit">{{value[0]}}</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">
+                            <div name="price">
+                                {{value[1]}}
+                            </div>
+                            <small class="text-muted fw-light">/원</small>
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+
+                            <li>한번 맛보면 빠져들어</li>
+                            <li>자꾸 사러오시면</li>
+                            <li>전 좋아요</li>
+                        </ul>
+                        <div>
+                            <input type="text" name="count" class="form-control" placeholder="Enter your EA"/>
+                            <input type="button" class="w-100 btn btn-lg btn-outline-primary" name="add" value="추가"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+            <div>
+                <table id='mytable' class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">fruit</th>
+                        <th scope="col">EA</th>
+                        <th scope="col">price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+            </div>
+            <form action="/pay" method="POST">
+            <div class="col-lg-12">
+                <div style="text-align:right">
+                    <h4  class="label label-default">
+                        <label for="total">total_price : </label>
+                        <input type="number" id="total" name="total" readonly />
+<!--                        <div id="to">원해요</div>-->
+                    </h4>
+                    <br>
+                    <a class="btn btn-dark" href={{url_for('main')}}>뒤로가기</a>
+                    <input type="submit" class="btn btn-info" value="결제" />
+
+                </div>
+            </div>
+            </form>
+    </main>
+</div>
+
+<script>
+$(function(){
+$("#total").val({{data.total}})
+
+var i = 0
+    $("input[name=add]").click(function(){
+        var sum = $("#total").val()
+        var idx= $("input[name=add]").index(this);
+        console.log(idx)
+<!--        $('#item').find("input[type=text]").each(function(index, item){-->
+    var price =$("div[name=price]").eq(idx).text()
+    var cnt =$("input[name=count]").eq(idx).val()
+    var fruit =$("h4[name=fruit]").eq(idx).text()
+    var total= cnt*price
+    $("#mytable>tbody").append("<tr><th class='label label-default'>"+i+++"</th><td>"+fruit+"</td><td>"+cnt+"</td><td>"+total+"</td></tr>");
+    $("#total").val(parseInt(sum)+parseInt(total))
+<!--    console.log(price*cnt)-->
+    });
+});
+
+console.log({{data.total}})
+
+</script>
+{% endblock %}

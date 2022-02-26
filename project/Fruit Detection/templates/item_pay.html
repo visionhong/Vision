@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+<div class="container">
+    <br>
+
+    <ul class="nav nav-pills pull-left">
+        <li role="presentation" class="btn btn-light" >
+            <a href="{{ url_for('main') }}">뒤로가기</a>
+        </li>
+    </ul>
+
+
+    <div class="page-header" role="presentation" style="text-align:center">
+        <h3>결제</h3>
+    </div>
+    <center>
+        <div class="btn-group-vertical" role="group" aria-label="...">
+            {% extends 'main_base.html' %}
+            {% block body %}
+            <form method="POST" action="{{url_for('pay')}}">
+                <ul class="list-group mb-3" id="list">
+                    <!--                    pay가 폼으로 가져온값-->
+                    {{pay.total}}
+
+                </ul>
+                <a class="btn btn-info" href="pay_cash" role="button">현금 결제</a>
+                <a class="btn btn-light" href="pay_card" role="button">카드 결제</a>
+            </form>
+
+            <script>
+
+
+
+
+            </script>
+            {% endblock %}
+
+            <a class="btn btn-info" href="pay_cash" role="button">현금 결제</a>
+            <a class="btn btn-light" href="pay_card" role="button">카드 결제</a>
+
+        </div>
+    </center>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,6 @@
+train: ../../fruit_yolov3/train
+val: ../../fruit_yolov3/valid
+#train: ../../../input/fruit-object-detection/fruit_yolov3/train
+#val: ../../../input/fruit-object-detection/fruit_yolov3/valid
+nc: 11
+names: ['apple', 'orange','pear','watermelon','durian','lemon','grapes','pineapple','dragon fruit','oriental melon','melon']

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c551a8ea-7f5a-486a-8cfb-da8dec89827f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLO v2/darknet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLO v2/datasets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLO v2/datasets/imdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLO v2/datasets/pascal_voc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLO v2/datasets/voc_eval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/contents/detection_cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/contents/detection_dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/contents/detection_horse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/darknet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/000844.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/001177.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/001760.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/002878.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/004854.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/006403.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/006902.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/009046.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/009646.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/test_samples/009875.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/voc2007.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/voc2007test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/data/voc2012.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/loss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/train_darknet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/train_yolo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/util_layers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/voc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv1/yolo_v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/Data/coco.names" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/cat4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/cfg/yolov3.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/darknet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/detect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/dog-cycle-car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/note.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/pallete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/video.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../YOLOv3/yolov3.weights" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1o3kf7B7F2ZZKN2daTZM60c5Pga" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SementicSegmentation" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c551a8ea-7f5a-486a-8cfb-da8dec89827f" name="Default Changelist" comment="" />
+      <created>1612522761548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612522761548</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1612522785406">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1612522785406" />
+  </component>
+</project>
